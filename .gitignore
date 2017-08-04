@@ -62,3 +62,5 @@ node_modules/*
 *.graffle
 bower_components
 .DS_Store
+config/wechat.txt
+config/wechat_ticket.txt
