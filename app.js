@@ -4,7 +4,8 @@ var Koa = require('koa')
 var path = require('path')
 var wechat = require('./wechat/g')
 var util = require('./libs/util')
-var wechat_file = path.join(__dirname,'./config/wechat.txt')
+var serveStatic = require('serve-static')
+var wechat_file = serveStatic(path.join(__dirname,'./config/.txt'))
 var config = {
     wechat: {
         appID: 'wx10634733a3237f78',

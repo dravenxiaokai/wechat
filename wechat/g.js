@@ -14,7 +14,7 @@ function Wechat(opts) {
   this.appID = opts.appID
   this.appSecret = opts.appSecret
   this.getAccessToken = opts.getAccessToken
-  this.saveAccessToken = opts.getAccessToken
+  this.saveAccessToken = opts.saveAccessToken
 
   this.getAccessToken()
     .then(function (data) {
@@ -68,6 +68,7 @@ Wechat.prototype.updateAccessToken = function () {
 }
 
 module.exports = function (opts) {
+  var wechat = new Wechat(opts)
   return function* (next) {
     console.log(this.query)
 
