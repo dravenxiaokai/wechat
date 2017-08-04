@@ -58,6 +58,7 @@ results
 
 npm-debug.log
 node_modules
+node_modules/*
 *.graffle
 bower_components
 .DS_Store
